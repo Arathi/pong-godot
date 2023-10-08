@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://cjbbrwye14163"]
+
+[ext_resource type="Script" path="res://scenes/game_scene.gd" id="1_7oxj3"]
+[ext_resource type="PackedScene" uid="uid://cdkf72o8jw5mb" path="res://actors/middle_line.tscn" id="1_kfhpw"]
+[ext_resource type="PackedScene" uid="uid://c4jghqq602f0q" path="res://actors/wall.tscn" id="2_n8giu"]
+[ext_resource type="PackedScene" uid="uid://bbgr7brfadg2y" path="res://actors/ball.tscn" id="3_rawpf"]
+[ext_resource type="PackedScene" uid="uid://c1tghot5laj4l" path="res://actors/bar.tscn" id="5_sgmtj"]
+[ext_resource type="PackedScene" uid="uid://ck6ldg5oh4e72" path="res://actors/bound.tscn" id="6_ocf7s"]
+
+[node name="game_scene" type="Node2D"]
+script = ExtResource("1_7oxj3")
+
+[node name="middle_line" parent="." instance=ExtResource("1_kfhpw")]
+position = Vector2(800, 0)
+
+[node name="wall_top" parent="." instance=ExtResource("2_n8giu")]
+position = Vector2(800, 0)
+
+[node name="wall_bottom" parent="." instance=ExtResource("2_n8giu")]
+position = Vector2(800, 900)
+
+[node name="ball" parent="." instance=ExtResource("3_rawpf")]
+position = Vector2(27106.9, -19155.6)
+velocity = Vector2(7.71706, -5.75101)
+
+[node name="bar_left" parent="." instance=ExtResource("5_sgmtj")]
+position = Vector2(50, 450)
+player = 1
+
+[node name="bar_right" parent="." instance=ExtResource("5_sgmtj")]
+position = Vector2(1550, 450)
+player = 2
+
+[node name="bound_left" parent="." instance=ExtResource("6_ocf7s")]
+position = Vector2(0, 450)
+player = 1
+
+[node name="bound_right" parent="." instance=ExtResource("6_ocf7s")]
+position = Vector2(1600, 450)
+player = 2

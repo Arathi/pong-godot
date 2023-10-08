@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdkf72o8jw5mb"]
+
+[ext_resource type="Script" path="res://actors/middle_line.gd" id="1_3in0h"]
+
+[node name="middle_line" type="Node2D"]
+script = ExtResource("1_3in0h")
